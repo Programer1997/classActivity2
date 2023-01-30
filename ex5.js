@@ -18,7 +18,31 @@ var shirtLength = 29; // size M (medium)
 var shirtSleeve = 8.47; // size M (medium)
 Then print N/A to the console because the measurements don't all match up with one particular size.
 */
+function sizes(shirtWidth,shirtLength,shirtSleeve){
 
-if (shirtWidth < 18 && shirtLength ){
-    
+
+if (shirtWidth <20 && shirtLength < 29  && shirtSleeve <8.38){
+    return "S"
+} else if (shirtWidth >=20 && shirtLength >= 29  && shirtSleeve >=8.38 && shirtWidth <22 && shirtLength < 30  && shirtSleeve <8.63){
+   return "M"
+} 
+if (shirtWidth >=22 && shirtLength >= 30  && shirtSleeve >=8.63 && shirtWidth <24 && shirtLength < 31  && shirtSleeve <8.88){
+    return "L"
+ } else if (shirtWidth >=24 && shirtLength >= 31  && shirtSleeve >=8.88 && shirtWidth <26 && shirtLength < 33  && shirtSleeve <9.63){
+    return "XL"
+ } else if (shirtWidth >=26 && shirtLength >= 33  && shirtSleeve >=9.63 && shirtWidth <28 && shirtLength < 34  && shirtSleeve <10.13){
+    return "2XL"
+ } else if (shirtWidth >=28 && shirtLength >= 34  && shirtSleeve >=10.13 ){
+    return "3XL"
+ } else {
+    return "N/A"
 }
+
+}
+
+console.log(sizes(18,28,8.13));
+console.log(sizes(20,29,8.38));
+console.log(sizes(22,30,8.63));
+console.log(sizes(24,31,8.88));
+console.log(sizes(26,33,9.63));
+console.log(sizes(28,34,10.13));
